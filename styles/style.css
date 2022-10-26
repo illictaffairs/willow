@@ -10,6 +10,7 @@ html[data-theme='dark']{
 	--light: #154360;	
 }
 *{
+	scroll-behavior: smooth;
 	transition: 0.3s;
 }
 body{
@@ -206,6 +207,7 @@ body{
 }
 /*=================trips===========*/
 .gallery-actual{
+	padding: 1vw;
 	margin-top:5rem;
 	background:var(--dark);
 	width: 90%;
@@ -220,6 +222,8 @@ body{
 	padding:1rem;
 }
 .actual1{
+	margin-top: 2.5vw;
+	border: 5px solid var(--accent);
 	color: var(--light);
 	font-size:3rem;
 	padding:1rem;
@@ -227,13 +231,13 @@ body{
     justify-content: flex-start;
     flex-direction: row;
 	display: flex;
-	width: 70vw;
+	width: 40vw;
 	height: 20vw;
 	transition:0.3s;
 }
 .actual1 img{
 	object-fit: cover;
-	width: 25vw;
+	width: 20vw;
 	height: 100%;
 }
 .actual-title{
@@ -248,16 +252,52 @@ body{
 	margin-left: 1vw;
 	display: flex;
 	flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
 }
 .actual-desc{
-	word-break: break-all;
+	word-break: normal;
     white-space: normal;
-	width: 30vw;
+	width: 19vw;
 	font-size:1.2vw;
 	font-family: 'Varela Round', sans-serif;
 }
+.actual-button{
+	cursor: pointer;
+	font-size:1.2rem;
+	font-family: 'Varela Round', sans-serif;
+	margin-top:1.5rem;
+	border-radius:0px;
+	background:var(--accent);
+	border:0 solid;
+	width:8rem;
+	min-height:3rem;
+	transition: 0.2s;
+}
+.actual-button:hover{
+	color: var(--accent);
+	background-color: var(--light);
+	transition: 0.2s;
+}
+.actual-container{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+.logo2{
+	padding:3vw;
+	color: var(--light);
+	display: flex;
+    font-family: 'Varela Round', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size:3vw;
+}
+#logo3{
+	font-family: 'Abril Fatface', cursive;
+}
+
 /*==============responsive things===============*/
 .mobile-header-container{
 	width: 100%;
@@ -270,7 +310,7 @@ body{
 }
 .mobile-header{
 	background: var(--accent);
-	position: sticky;
+	position: fixed;
 	display: none;
 	width:3rem;
 	height:3rem;
@@ -282,11 +322,11 @@ body{
 }
 
 /*====================mobile-header===============*/
-@media screen and (max-width: 750px) {
-  .img1, .img3{
+@media screen and (max-width: 800px) {
+  #img1, #img3{
     display: none;
   }
-  .img2{
+  #img2{
   	height:50vw;
   	width:95%;
   }
@@ -303,9 +343,7 @@ body{
   	background: none;
   	border: none;
   }
-}
-@media screen and (max-width: 1000px) {
-	.actual1{
+  .actual1{
 
 	}
 	.hero-text{
